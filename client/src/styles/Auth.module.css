@@ -15,11 +15,11 @@
 }
 
 .auth-type {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     font-size: 0.8rem;
     color: grey;
 }
 
 .auth-field {
-    margin-top: 1.5rem;
+    margin-top: 10px;
 }
