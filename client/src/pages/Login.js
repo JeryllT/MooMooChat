@@ -3,31 +3,59 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import LoginStyles from '../styles/Login.module.css';
+import AuthStyles from '../styles/Auth.module.css';
+import TextField from '@mui/material/TextField';
+import LoginIcon from '@mui/icons-material/Login';
 
 
 
 const Login = () => {
+    
+    const handleLogin = (e) => {
+        e.preventDefault();
+    }
 
     return (
-        <div className={LoginStyles['flex-container']}>
-            <Card style={{width: "250px"}}>
+        <div className={AuthStyles['flex-container']}>
+            <Card className={AuthStyles['auth-card']}>
                 <CardContent>
-                    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                    Moo Moo Chat
-                    </Typography>
-                    <Typography variant="h5" component="div">
-                    testing
-                    </Typography>
-                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    adjective
-                    </Typography>
-                    <Typography variant="body2">
-                    well meaning and kindly.
-                    <br />
-                    {'"a benevolent smile"'}
-                    </Typography>
+                    <Typography variant="h6">MooMoo Chat</Typography>
+                    <Typography className={AuthStyles['auth-type']}>Login</Typography>
+                    <form onSubmit={handleLogin}>
+                        <TextField 
+                            className={AuthStyles['auth-field']}
+                            label='Email'
+                            variant='outlined'
+                            type='email'
+                            color='primary'
+                            size='small'
+                            placeholder='example@gmail.com'
+                            required
+                            fullWidth
+                        />
+                        <TextField 
+                            className={AuthStyles['auth-field']}
+                            label='Password'
+                            variant='outlined'
+                            type='password'
+                            color='primary'
+                            size='small'
+                            placeholder='Password'
+                            required
+                            fullWidth
+                        />
+                        <Button
+                            variant='contained'
+                            startIcon={<LoginIcon />}
+                            size='medium'
+                            sx={{mt: 3}}
+                            fullWidth
+                            type='submit'
+                        >
+                            Login
+                        </Button>
+                        <Typography className={AuthStyles['auth-type']}>Don't have an Account? Register Here</Typography>
+                    </form>
                 </CardContent>
             </Card>
         </div>
