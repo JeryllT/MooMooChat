@@ -80,8 +80,12 @@ const Registration = () => {
                             type='button'
                         >
                             <input hidden accept="image/*" type="file" onChange={handleUpload}/>
-                            <AddPhotoAlternateIcon />
-                            {successUpload ? <Typography>{avatar.name}</Typography> : <Typography>Upload Avatar</Typography>}
+                            <AddPhotoAlternateIcon fontSize='large'/>
+                            {
+                                successUpload ? 
+                                <Typography className={AuthStyles['avatar-upload-text']}>{avatar.name}</Typography> : 
+                                <Typography className={AuthStyles['avatar-upload-text']}>Upload Avatar</Typography>
+                            }
                         </IconButton>
                     </div>
                     <Button

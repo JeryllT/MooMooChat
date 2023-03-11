@@ -26,4 +26,10 @@
 
 .avatar-upload {
     display: flex;
+    margin-top: 10px;
+}
+
+.avatar-upload-text {
+    margin-left: 10px;
+    font-size: 12px;
 }
