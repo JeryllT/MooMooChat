@@ -8,14 +8,23 @@ import LoginIcon from '@mui/icons-material/Login';
 import IconButton from '@mui/material/IconButton';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import {useState} from 'react';
+import Alert from '@mui/material/Alert';
 
 const Registration = () => {
 
     const [avatar, setAvatar] = useState("");
     const [successUpload, setSuccessUpload] = useState(false);
+    const [errorMsg, setErrorMsg] = useState("");
 
     const handleRegistration = (e) => {
         e.preventDefault();
+        console.log("HELLO")
+        if(successUpload !== true) {
+            setErrorMsg("Please upload an avatar before Submitting")
+            setTimeout(() => {
+                setErrorMsg("")
+            }, 3000)
+        }
     }
 
     const handleUpload = (e) => {
@@ -26,6 +35,7 @@ const Registration = () => {
     return (
         <div className={AuthStyles['flex-container']}>
         <Card className={AuthStyles['auth-card']}>
+            {errorMsg ? <Alert severity="error">{errorMsg}</Alert> : null} 
             <CardContent>
                 <Typography variant="h6">MooMoo Chat</Typography>
                 <Typography className={AuthStyles['auth-type']}>Register</Typography>
@@ -67,6 +77,7 @@ const Registration = () => {
                         <IconButton 
                             aria-label="upload picture" 
                             component="label"
+                            type='button'
                         >
                             <input hidden accept="image/*" type="file" onChange={handleUpload}/>
                             <AddPhotoAlternateIcon />
