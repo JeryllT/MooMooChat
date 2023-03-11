@@ -6,8 +6,8 @@
 }
 
 .auth-card {
-    width: 17rem;
-    height: 20rem;
+    width: 20rem;
+    min-height: 20rem;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
@@ -22,4 +22,8 @@
 
 .auth-field {
     margin-top: 10px;
+}
+
+.avatar-upload {
+    display: flex;
 }
