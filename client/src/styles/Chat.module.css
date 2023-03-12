@@ -39,6 +39,7 @@
 .searchbar {
     grid-area: searchbar;
     background-color: #fff1d2;
+    border-bottom: 1px solid lightgrey;
 }
 
 .contacts {
