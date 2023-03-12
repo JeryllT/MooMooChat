@@ -1,0 +1,14 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 20vw 60vw 20vw;
+    grid-template-rows: 15vh 70vh 15vh;
+
+}
+
+.chat-container {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
