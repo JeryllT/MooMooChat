@@ -1,0 +1,57 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 20vw 60vw 20vw;
+    grid-template-rows: 15vh 70vh 15vh;
+}
+
+.chat-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 0.5fr repeat(7, 1fr);
+    grid-template-areas:
+        "Profile Recipient Recipient"
+        "searchbar chat chat"
+        "contacts chat chat"
+        "contacts chat chat"
+        "contacts chat chat"
+        "contacts chat chat"
+        "contacts chat chat"
+        "contacts chat chat"
+        "contacts message message";
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    max-height: 70vh;
+    max-width: 60vw;
+    border-radius: 15px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.profile {
+    grid-area: Profile;
+    background-color: #FFDAB6;
+}
+
+.recipient {
+    grid-area: Recipient;
+    background-color: #FFDAB6;
+}
+
+.searchbar {
+    grid-area: searchbar;
+    background-color: #fff1d2;
+    border-bottom: 1px solid lightgrey;
+}
+
+.contacts {
+    grid-area: contacts;
+    background-color: #fff1d2;
+}
+
+.chat {
+    grid-area: chat;
+    background-color: #f5ecde;
+}
+
+.message {
+    grid-area: message;
+}
