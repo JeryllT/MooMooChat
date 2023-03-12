@@ -28,20 +28,25 @@
 
 .header-left {
     grid-area: headerleft;
+    background-color: #FFDAB6;
 }
 
 .header-right {
     grid-area: headerRight;
+    background-color: #FFDAB6;
 }
 
 .searchbar {
     grid-area: searchbar;
+    background-color: #fff1d2;
 }
 
 .contacts {
     grid-area: contacts;
+    background-color: #fff1d2;
 }
 
 .chat {
     grid-area: chat;
+    background-color: #f5ecde;
 }
