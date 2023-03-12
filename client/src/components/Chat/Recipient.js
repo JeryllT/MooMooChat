@@ -1,9 +1,7 @@
-import ChatStyles from '../../styles/Chat.module.css'
-
 const Recipient = () => {
 
     return (
-            <div className={ChatStyles['recipient']}>
+            <div>
                 User details
             </div>
     )

@@ -1,0 +1,49 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 20vw 60vw 20vw;
+    grid-template-rows: 15vh 70vh 15vh;
+}
+
+.chat-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    max-height: 70vh;
+    max-width: 60vw;
+    border-radius: 15px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.sidebar {
+    grid-column: 1 / 2;
+    border: 1px solid darkgrey;
+    display: grid;
+    grid-template-rows: 5vh 5vh 1fr;
+}
+
+.chat {
+    grid-column: 2 / 5;
+    display: grid;
+    grid-template-rows: 5vh 1fr 8vh;
+}
+
+/* .searchbar {
+    grid-area: searchbar;
+    background-color: #fff1d2;
+    border-bottom: 1px solid lightgrey;
+}
+
+.contacts {
+    grid-area: contacts;
+    background-color: #fff1d2;
+}
+
+.chat {
+    grid-area: chat;
+    background-color: #f5ecde;
+}
+
+.message {
+    grid-area: message;
+} */

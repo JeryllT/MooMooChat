@@ -1,9 +1,9 @@
-import ChatStyles from '../../styles/Chat.module.css'
+import SidebarStyles from '../../styles/Sidebar.module.css'
 
 const Profile = () => {
 
     return (
-        <div className={ChatStyles['profile']}>
+        <div className={SidebarStyles['profile']}>
             Moomoo Chat
         </div>
     )

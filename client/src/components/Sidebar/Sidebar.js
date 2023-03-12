@@ -1,17 +1,18 @@
 import Profile from './Profile'
-import ChatStyles from '../../styles/Chat.module.css'
+import HomeStyles from '../../styles/Home.module.css'
+import SidebarStyles from '../../styles/Sidebar.module.css'
 
 const Sidebar = () => {
   return (
-    <>
+    <div className={HomeStyles['sidebar']}>
         <Profile />
-        <div className={ChatStyles['searchbar']}>
+        <div className={SidebarStyles['searchbar']}>
             Search Bar
         </div>
-        <div className={ChatStyles['contacts']}>
+        <div className={SidebarStyles['contacts']}>
             contacts
         </div>
-    </>
+    </div>
   )
 }
 
