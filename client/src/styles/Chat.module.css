@@ -9,7 +9,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 0.5fr repeat(7, 1fr);
     grid-template-areas:
-        "headerleft headerRight headerRight"
+        "Profile Recipient Recipient"
         "searchbar chat chat"
         "contacts chat chat"
         "contacts chat chat"
@@ -26,13 +26,13 @@
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
 }
 
-.header-left {
-    grid-area: headerleft;
+.profile {
+    grid-area: Profile;
     background-color: #FFDAB6;
 }
 
-.header-right {
-    grid-area: headerRight;
+.recipient {
+    grid-area: Recipient;
     background-color: #FFDAB6;
 }
 
